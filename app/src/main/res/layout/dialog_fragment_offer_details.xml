@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.OfferDetailsDialogFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle_horz_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <TextView
+        android:id="@+id/offer_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:textColor="@color/ibotta_font_color"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Offer name"/>
+
+    <ImageView
+        android:id="@+id/offer_image_iv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/offer_name_tv"
+        app:layout_constraintBottom_toBottomOf="@id/middle_horz_guideline"
+        android:scaleType="centerInside"
+        android:background="@color/ibotta_gray_bg"/>
+
+    <TextView
+        android:id="@+id/cash_back_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/offer_image_iv"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/ibotta_font_color"
+        android:textSize="@dimen/_11ssp"
+        android:text="$1.00 cash back"/>
+
+    <TextView
+        android:id="@+id/description_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cash_back_tv"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:text="Description"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        android:textColor="@color/ibotta_font_color"
+        />
+
+    <TextView
+        android:id="@+id/description_text_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description_title_tv"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/ibotta_font_color"
+        android:textSize="@dimen/_11ssp"
+        android:text="This is some placeholder text to get an idea of what a longer description would look like." />
+
+    <TextView
+        android:id="@+id/terms_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description_text_tv"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:text="Terms"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        android:textColor="@color/ibotta_font_color"
+        />
+
+    <TextView
+        android:id="@+id/terms_text_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/terms_title_tv"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/ibotta_font_color"
+        android:textSize="@dimen/_11ssp"
+        android:text="Here's a bit of placeholder text for the terms of this offer." />
+
+    <TextView
+        android:id="@+id/fav_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/terms_text_tv"
+        android:textColor="@color/ibotta_font_color"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp"
+        android:text="Mark as favorite"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/fav_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/fav_title_tv"
+        app:layout_constraintTop_toTopOf="@id/fav_title_tv"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
